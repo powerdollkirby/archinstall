@@ -85,31 +85,29 @@ then use archinstall script
 
     root@archiso ~ # archinstall
 
-    
+then 
 
     Mirrors: here you have to select the mirror that is closer to you
     Locales: select the defined by your region and keyboard layout
     Disk configuration: select pre-mounted configuration
     here enter the root directory of mounted devices: /mnt
 
-    Disk encryption: up to you, i generally don't use it
-    Bootloader: select grub
-    Unified kernel images: false
-    Swap: true
-    Host name: default or change it, up to you
-    Root password: set a password
-    User account: add a user and use the same password as root and make this user a superuser.
-    Profile: here you'll select the type, desktop environment, gpu drivers and greeter
-    go for KDE or Gnome
-
-    Gpu drivers: select open source for amd or intel, if you're using nvidia select proprietary nvidia
-    greeter: sddm
-    Audio: Pipewire
-    Kernels: use the default
-    Additional packages: firefox flatpak nano gcc clang make cmake btop htop nvtop
-    Network configuration: select use networkmanager
-    Timezone: select your timezone
-    Additional repositories: select multilib
+    Disk encryption:          up to you, i generally don't use it
+    Bootloader:               select grub
+    Unified kernel images:    false
+    Swap:                     true
+    Host name:                default or change it, up to you
+    Root password:            set a password
+    User account:             add a user and use the same password as root and make this user a superuser.
+    Profile:                  here you'll select the type, desktop environment, gpu drivers and greeter
+    Gpu drivers:              select open source for amd or intel, if you're using nvidia select proprietary nvidia
+    greeter:                  sddm
+    Audio:                    Pipewire
+    Kernels:                  use the default
+    Additional packages:      firefox flatpak nano gcc clang make cmake btop htop nvtop
+    Network configuration:    select use networkmanager
+    Timezone:                 select your timezone
+    Additional repositories:  select multilib
 
 then
 
