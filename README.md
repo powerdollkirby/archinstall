@@ -1,8 +1,7 @@
 # archinstall
-quick arch install guide
+Quick arch linux install guide using archinstall script
 
 
-hi, so i took the time to write how i install arch linux using the archinstall script and manually partitioning because i wanted to make a deaf friendly video but it's going to take some time so this is the text version i guess
 
 this is how i do it and it works for me
 
