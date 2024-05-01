@@ -20,7 +20,7 @@ set the time and date:
 
 to speed things up we'll do
 
-    root@archiso ~ # pacman -Sy archlinux-keyring --noconfirm````
+    root@archiso ~ # pacman -Sy archlinux-keyring --noconfirm
 
 listing all block devices:
 
