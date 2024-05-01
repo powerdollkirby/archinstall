@@ -87,10 +87,10 @@ then use archinstall script
 
 then 
 
-    Mirrors: here you have to select the mirror that is closer to you
-    Locales: select the defined by your region and keyboard layout
-    Disk configuration: select pre-mounted configuration
-    here enter the root directory of mounted devices: /mnt
+    Mirrors:                  here you have to select the mirror that is closer to you
+    Locales:                  select the defined by your region and keyboard layout
+    Disk configuration:       select pre-mounted configuration
+                              here enter the root directory of mounted devices: /mnt
 
     Disk encryption:          up to you, i generally don't use it
     Bootloader:               select grub
