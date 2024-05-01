@@ -1,4 +1,4 @@
-![arch](https://upload.wikimedia.org/wikipedia/commons/1/13/Arch_Linux_%22Crystal%22_icon.svg)
+![arch](https://archlinux.org/static/logos/archlinux-logo-black-90dpi.0c696e9c0d84.png)
 # archinstall
 Quick arch linux install guide using archinstall script
 
