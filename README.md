@@ -8,7 +8,7 @@ this is how i do it and it works for me
 
 
 
-if you're using a laptop or wifi follow the iwctl guide to connect to your wifi
+if you're using a laptop or wifi follow the [iwctl](https://wiki.archlinux.org/title/Iwd) guide to connect to your wifi
 
 
 now, the install
