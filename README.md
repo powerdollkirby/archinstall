@@ -1,4 +1,4 @@
-![arch](https://archlinux.org/static/logos/archlinux-logo-black-90dpi.0c696e9c0d84.png)
+![arch](https://github.com/powerdollkirby/archinstall/blob/main/archlinux-anime-logo.png)
 # archinstall
 Quick arch linux install guide using archinstall script
 
@@ -146,3 +146,6 @@ why grub? because i'm used to it :D
 
 
 [![Archinstall Guide](https://starchart.cc/powerdollkirby/archinstall.svg)](https://starchart.cc/powerdollkirby/archinstall)
+
+
+arch linux anime logo by: [@sawaratsuki1004](https://twitter.com/sawaratsuki1004) post: [x.com](https://x.com/sawaratsuki1004/status/1782373444233118036)
