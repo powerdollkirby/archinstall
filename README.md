@@ -143,3 +143,6 @@ then
 done!
 
 why grub? because i'm used to it :D
+
+
+[![Archinstall Guide](https://starchart.cc/powerdollkirby/archinstall.svg)](https://starchart.cc/powerdollkirby/archinstall)
