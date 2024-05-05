@@ -66,7 +66,7 @@ nvme0n1p2 499G as ext4
 
 then mount nvme0n1p2 to /mnt
 
-    root@archiso ~ # mount nvme0n1p2 /mnt
+    root@archiso ~ # mount /dev/nvme0n1p2 /mnt
 
 then
 
