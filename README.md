@@ -9,7 +9,7 @@ __________________________________________
 
 
 
->if you're using a laptop or using a wifi card 
+>if you're using a laptop or a wifi card 
 >follow the [iwctl](https://wiki.archlinux.org/title/Iwd#iwctl) guide 🕮
 
 
