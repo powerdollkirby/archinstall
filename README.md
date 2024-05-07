@@ -1,26 +1,36 @@
 ![arch](https://github.com/powerdollkirby/archinstall/blob/main/archlinux-anime-logo.png)
 # archinstall
-Quick arch linux install guide using archinstall script
+
+
+Quick arch linux install guide using archinstall script and manual partitioning.
+
+__________________________________________
 
 
 
-this is how i do it and it works for me
+
+>if you're using a laptop or using a wifi card 
+>follow the [iwctl](https://wiki.archlinux.org/title/Iwd#iwctl) guide 🕮
 
 
+__________________________________________
+⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆
 
-if you're using a laptop or wifi follow the [iwctl](https://wiki.archlinux.org/title/Iwd) guide to connect to your wifi
-
-
-now, the install
+1.
 
 set the time and date:
 
     root@archiso ~ # timedatectl set-ntp true
 
 
+2.
+
+
 to speed things up we'll do
 
     root@archiso ~ # pacman -Sy archlinux-keyring --noconfirm
+
+__________________________________________
 
 listing all block devices:
 
@@ -54,13 +64,13 @@ like this:
 partitioning without a swap eg:
 
 formatting:
-nvme0n1p1 1G as fat32
-
-and
-
-nvme0n1p2 499G as ext4
+nvme0n1p1 1G (boot) as fat32
 
     root@archiso ~ # mkfs.fat -F32 /dev/nvme0n1p1
+
+
+nvme0n1p2 499G (root) as ext4
+
     root@archiso ~ # mkfs.ext4 /dev/nvme0n1p2
 
 
@@ -68,11 +78,11 @@ then mount nvme0n1p2 to /mnt
 
     root@archiso ~ # mount /dev/nvme0n1p2 /mnt
 
-then
+then make a boot directory on /mnt
 
     root@archiso ~ # mkdir /mnt/boot
 
-then
+then mount /dev/nvme0n1p1 to /mnt/boot
 
     root@archiso ~ # mount /dev/nvme0n1p1 /mnt/boot
 
@@ -94,25 +104,28 @@ then
                               here enter the root directory of mounted devices: /mnt
 
     Disk encryption:          up to you, i generally don't use it
-    Bootloader:               select grub
+    Bootloader:               grub
     Unified kernel images:    false
     Swap:                     true
-    Host name:                default or change it, up to you
-    Root password:            set a password
+    Host name:                Default or change it, up to you
+    Root password:            Set a password
     User account:             add a user and use the same password as root and make this user a superuser.
     Profile:                  here you'll select the type, desktop environment, gpu drivers and greeter
-    Gpu drivers:              select open source for amd or intel, if you're using nvidia select proprietary nvidia
+    Gpu drivers:              Open source for amd and intel, if you're using nvidia select proprietary nvidia
     greeter:                  sddm
+    
     Audio:                    Pipewire
-    Kernels:                  use the default
+    Kernels:                  Default
     Additional packages:      firefox flatpak nano gcc clang make cmake btop htop nvtop
-    Network configuration:    select use networkmanager
+    Network configuration:    use networkmanager
     Timezone:                 select your timezone
-    Additional repositories:  select multilib
+    Additional repositories:  multilib
 
 then
 
     install
+
+__________________________________________
 
 after the install:
 
@@ -120,29 +133,29 @@ after the install:
 yes
 
 
-then
+then install grub efibootmgr dosfstools mtools:
 
     root@archiso ~ # pacman -Sy grub efibootmgr dosfstools mtools
 
-then
+then:
 
     root@archiso ~ # grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 
-then
+then make a grub config file:
 
     root@archiso ~ # grub-mkconfig -o /boot/grub/grub.cfg
 
-now exit
+now exit:
 
     root@archiso ~ # exit
 
-then
+then:
 
     root@archiso ~ # reboot
 
-done!
+done!✿
 
-why grub? because i'm used to it :D
+· · ───────
 
 
 [![Archinstall Guide](https://starchart.cc/powerdollkirby/archinstall.svg)](https://starchart.cc/powerdollkirby/archinstall)
