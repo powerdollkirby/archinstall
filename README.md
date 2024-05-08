@@ -158,7 +158,15 @@ done!✿
 · · ───────
 
 
-[![Archinstall Guide](https://starchart.cc/powerdollkirby/archinstall.svg)](https://starchart.cc/powerdollkirby/archinstall)
+## Star History
+
+<a href="https://star-history.com/#powerdollkirby/archinstall&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=powerdollkirby/archinstall&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=powerdollkirby/archinstall&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=powerdollkirby/archinstall&type=Date" />
+ </picture>
+</a>
 
 
 arch linux anime logo by: [@sawaratsuki1004](https://twitter.com/sawaratsuki1004) post: [x.com](https://x.com/sawaratsuki1004/status/1782373444233118036)
