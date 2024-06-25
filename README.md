@@ -11,6 +11,101 @@ __________________________________________
 
 >if you're using a laptop or a wifi card 
 >follow the [iwctl](https://wiki.archlinux.org/title/Iwd#iwctl) guide 🕮
+<details>
+<summary>iwctl</summary>
+    
+
+To get an interactive prompt do:
+
+    $ iwctl
+
+The interactive prompt is then displayed with a prefix of [iwd]#.
+
+Tip:
+In the iwctl prompt you can auto-complete commands and device names by hitting Tab.
+To exit the interactive prompt, send EOF by pressing Ctrl+d.
+You can use all commands as command line arguments without entering an interactive prompt. For example: iwctl device wlan0 show.
+
+To list all available commands:
+
+    [iwd]# help
+
+Connect to a network
+
+First, if you do not know your wireless device name, list all Wi-Fi devices:
+
+    [iwd]# device list
+
+If the device or its corresponding adapter is turned off, turn it on:
+
+    [iwd]# device name set-property Powered on
+
+    [iwd]# adapter adapter set-property Powered on
+
+Then, to initiate a scan for networks (note that this command will not output anything):
+
+    [iwd]# station name scan
+
+You can then list all available networks:
+
+    [iwd]# station name get-networks
+
+Finally, to connect to a network:
+
+    [iwd]# station name connect SSID
+
+Note: For automatic IP and DNS configuration via DHCP, you have to manually enable the built-in DHCP client or configure a standalone DHCP client.
+Tip: The user interface supports autocomplete, by typing station and Tab Tab, the available devices are displayed, type the first letters of the device and Tab to complete. The same way, type connect and Tab Tab in order to have the list of available networks displayed. Then, type the first letters of the chosen network followed by Tab in order to complete the command.
+
+If a passphrase is required (and it is not already stored in one of the profiles that iwd automatically checks), you will be prompted to enter it. Alternatively, you can supply it as a command line argument:
+
+    $ iwctl --passphrase passphrase station name connect SSID
+
+Note:
+
+    iwd automatically stores network passphrases in the /var/lib/iwd directory and uses them to auto-connect in the future. See #Network configuration.
+    To connect to a network with spaces in the SSID, the network name should be double quoted when connecting.
+    iwd only supports PSK pass-phrases from 8 to 63 ASCII-encoded characters. The following error message will be given if the requirements are not met: PMK generation failed. Ensure Crypto Engine is properly configured.
+
+Connect to a network using WPS/WSC
+
+If your network is configured such that you can connect to it by pressing a button (Wikipedia:Wi-Fi Protected Setup), check first that your network device is also capable of using this setup procedure.
+
+    [iwd]# wsc list
+
+Then, provided that your device appeared in the above list,
+
+    [iwd]# wsc device push-button
+
+and push the button on your router. The procedure works also if the button was pushed beforehand, less than 2 minutes earlier.
+
+If your network requires to validate a PIN number to connect that way, check the help command output to see how to provide the right options to the wsc command.
+Disconnect from a network
+
+To disconnect from a network:
+
+    [iwd]# station device disconnect
+
+Show device and connection information
+
+To display the details of a WiFi device, like MAC address:
+
+    [iwd]# device device show
+
+To display the connection state, including the connected network of a Wi-Fi device:
+
+    [iwd]# station device show
+
+Manage known networks
+
+To list networks you have connected to previously:
+
+    [iwd]# known-networks list
+
+To forget a known network:
+
+    [iwd]# known-networks SSID forget
+</details>
 
 
 __________________________________________
