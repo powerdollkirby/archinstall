@@ -2,7 +2,7 @@
 # archinstall
 
 
-Quick arch linux install guide using archinstall script and manual partitioning.
+Quick arch linux install guide using archinstall script and manual partitioning. (without a swap partition)
 
 __________________________________________
 
